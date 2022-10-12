@@ -7,10 +7,8 @@ public class User extends Entity{
 
     public User(int id, String username, String password) {
         setId(id);
-        if(username == null || password == null)
-            throw new IllegalArgumentException("can't be empty/null");
-        this.username = username;
-        this.password = password;
+        setUsername(username);
+        setPassword(password);
     }
 
     public String getUsername() {
@@ -18,6 +16,8 @@ public class User extends Entity{
     }
 
     public void setUsername(String username) {
+        if(username == null)
+            throw new IllegalArgumentException("can't be empty/null");
         this.username = username;
     }
 
@@ -26,6 +26,8 @@ public class User extends Entity{
     }
 
     public void setPassword(String password) {
+        if(password == null)
+            throw new IllegalArgumentException("can't be empty/null");
         this.password = password;
     }
 
