@@ -8,7 +8,7 @@ public class Group extends Entity{
     List<User> users;
 
     public Group(int id, String name) {
-        super(id);
+        setId(id);
         this.name = name;
         this.users = new ArrayList<>();
     }

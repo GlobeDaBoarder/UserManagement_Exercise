@@ -6,7 +6,7 @@ public class User extends Entity{
     private Group group;
 
     public User(int id, String username, String password) {
-        super(id);
+        setId(id);
         if(username == null || password == null)
             throw new IllegalArgumentException("can't be empty/null");
         this.username = username;
