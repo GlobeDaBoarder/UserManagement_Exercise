@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Group extends Entity{
     private String name;
-    List<User> users;
+    private List<User> users;
 
     public Group(int id, String name) {
         setId(id);
